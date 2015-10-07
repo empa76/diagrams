@@ -14,4 +14,5 @@ group :test do
   gem 'database_rewinder'
   gem 'factory_girl_rails'
   gem 'rspec-collection_matchers'
+  gem 'shoulda'
 end
