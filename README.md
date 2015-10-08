@@ -20,41 +20,6 @@ Sample API to diagram editing using shapes (rectangle and circle)
 
 # Sample requests/responses
 
-## Shapes structures
-
-1. Rectangle
-
-```JSON
-{
-  "shape": {
-    "label": "purple-rect",
-    "kind": "rectangle",
-    "properties" : {
-      "width": 15,
-      "heigth": 10,
-      "center_x": 0,
-      "center_y": 0,
-      "color": "purple"
-    }
-  }
-}```
-
-2. Circle
-
-```JSON
-{
-  "shape": {
-    "label": "my-sample-circle",
-    "kind": "circle",
-    "properties" : {
-      "radius": 10,
-      "center_x": 0,
-      "center_y": 0,
-      "color": "white"
-    }
-  }
-}```
-
 ### create new diagram
 
 POST `/api/v1/users/1/diagrams`
@@ -72,12 +37,10 @@ POST `/api/v1/users/1/diagrams`
 
 ```JSON
 {
-  {
-      "diagram": {
-          "id": 1,
-          "name": "magnetic-board",
-          "shapes": []
-      }
+  "diagram": {
+      "id": 1,
+      "name": "magnetic-board",
+      "shapes": []
   }
 }```
 
@@ -98,12 +61,10 @@ PUT `/api/v1/users/1/diagrams/1`
 
 ```JSON
 {
-  {
-      "diagram": {
-          "id": 1,
-          "name": "white-magnetic-board",
-          "shapes": []
-      }
+  "diagram": {
+    "id": 1,
+    "name": "white-magnetic-board",
+    "shapes": []
   }
 }```
 
@@ -140,16 +101,16 @@ POST `/api/v1/users/1/diagrams/1/shapes`
 
 ```JSON
 {
-    "shape": {
-        "id": 1,
-        "label": "purple-square",
-        "kind": "rectangle",
-        "properties": {
-            "color": "purple",
-            "width": 10,
-            "heigth": 10
-        }
+  "shape": {
+    "id": 1,
+    "label": "purple-square",
+    "kind": "rectangle",
+    "properties": {
+        "color": "purple",
+        "width": 10,
+        "heigth": 10
     }
+  }
 }```
 
 ### update shape on diagram
@@ -173,17 +134,16 @@ PUT `/api/v1/users/1/diagrams/1/shapes/1`
 
 ```JSON
 {
-    "shape": {
-        "id": 1,
-        "label": "purple-square-big",
-        "kind": "circle",
-        "properties": {
-            "width": 100,
-            "heigth": 100
-        }
+  "shape": {
+    "id": 1,
+    "label": "purple-square-big",
+    "kind": "circle",
+    "properties": {
+        "width": 100,
+        "heigth": 100
     }
+  }
 }```
-
 
 ### delete shape from diagram
 
@@ -193,4 +153,33 @@ DELETE `/api/v1/users/1/diagrams/1/shapes/1`
 
 ```JSON
 {
+}```
+
+## Shapes structures (rectangle & circle)
+
+```JSON
+{
+  "shape": {
+    "label": "purple-rect",
+    "kind": "rectangle",
+    "properties" : {
+      "width": 15,
+      "heigth": 10,
+      "center_x": 0,
+      "center_y": 0,
+      "color": "purple"
+    }
+  }
+},
+{
+  "shape": {
+    "label": "my-sample-circle",
+    "kind": "circle",
+    "properties" : {
+      "radius": 10,
+      "center_x": 0,
+      "center_y": 0,
+      "color": "white"
+    }
+  }
 }```
