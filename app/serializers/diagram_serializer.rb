@@ -1,3 +1,4 @@
 class DiagramSerializer < ActiveModel::Serializer
   attributes :id, :name
+  has_many :shapes
 end
