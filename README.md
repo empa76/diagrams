@@ -32,7 +32,7 @@ Sample API to diagram editing using shapes (rectangle and circle)
     "properties" : {
       "width": 15,
       "heigth": 10,
-      center_x": 0,
+      "center_x": 0,
       "center_y": 0,
       "color": "purple"
     }
