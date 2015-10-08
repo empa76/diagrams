@@ -1,7 +1,8 @@
 module Api
   module V1
     class DiagramsController < ApplicationController
-      expose(:diagrams)
+      expose(:user)
+      expose(:diagrams, ancestor: :user)
       expose(:diagram)
 
       def show
