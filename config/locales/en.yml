@@ -23,3 +23,4 @@ en:
   errors:
     messages:
       record_not_found: Record not found
+      missing_parameters: Missing parameters!
