@@ -18,18 +18,17 @@ Sample API to diagram editing using shapes (rectangle and circle)
 
 1. Run rails server, eg. ```rails s```
 
-
 # JSON details
 
 ## Diagram
 
 ```json
 {
-  "id": 1,
-  "name": "white-board",
-  "shapes": [
-    ...
-  ]
+  "diagram": {
+      "id": 1,
+      "name": "white-board",
+      "shapes": []
+  }
 }
 ```
 
