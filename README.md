@@ -25,7 +25,7 @@ Sample API to diagram editing using shapes (rectangle and circle)
 
 ```json
 {
-  id": 1,
+  "id": 1,
   "name": "white-board",
   "shapes": [
     ...
