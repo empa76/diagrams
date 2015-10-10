@@ -18,13 +18,53 @@ Sample API to diagram editing using shapes (rectangle and circle)
 
 1. Run rails server, eg. ```rails s```
 
-# Sample requests/responses
+
+# JSON details
+
+## Shapes JSON structure
+
+### Rectangle
+
+```json
+{
+  "shape": {
+    "label": "purple-rect",
+    "kind": "rectangle",
+    "properties" : {
+      "width": 15,
+      "heigth": 10,
+      "center_x": 0,
+      "center_y": 0,
+      "color": "purple"
+    }
+  }
+}
+```
+
+### Circle
+
+```json
+{
+  "shape": {
+    "label": "my-sample-circle",
+    "kind": "circle",
+    "properties" : {
+      "radius": 10,
+      "center_x": 0,
+      "center_y": 0,
+      "color": "white"
+    }
+  }
+}
+```
+
+## Sample requests/responses
 
 ### create new diagram
 
 POST `/api/v1/1/diagrams`
 
-#### request payload
+##### request payload
 
 ```json
 {
@@ -34,7 +74,7 @@ POST `/api/v1/1/diagrams`
 }
 ```
 
-#### response
+##### response
 
 ```json
 {
@@ -50,7 +90,7 @@ POST `/api/v1/1/diagrams`
 
 PUT `/api/v1/diagrams/1`
 
-#### request payload
+##### request payload
 
 ```json
 {
@@ -60,7 +100,7 @@ PUT `/api/v1/diagrams/1`
 }
 ```
 
-#### response
+##### response
 
 ```json
 {
@@ -76,18 +116,17 @@ PUT `/api/v1/diagrams/1`
 
 PUT `/api/v1/diagrams/1`
 
-#### response
+##### response
 
 ```json
-{
-}
+{}
 ```
 
 ### add shape to diagram
 
 POST `/api/v1/diagrams/1/shapes`
 
-#### request payload
+##### request payload
 
 ```json
 {
@@ -103,7 +142,7 @@ POST `/api/v1/diagrams/1/shapes`
 }
 ```
 
-#### response
+##### response
 
 ```json
 {
@@ -124,7 +163,7 @@ POST `/api/v1/diagrams/1/shapes`
 
 PUT `/api/v1/diagrams/1/shapes/1`
 
-#### request payload
+##### request payload
 
 ```json
 {
@@ -138,7 +177,7 @@ PUT `/api/v1/diagrams/1/shapes/1`
 }
 ```
 
-#### response
+##### response
 
 ```json
 {
@@ -158,39 +197,8 @@ PUT `/api/v1/diagrams/1/shapes/1`
 
 DELETE `/api/v1/diagrams/1/shapes/1`
 
-#### response
+##### response
 
 ```json
-{
-}
-```
-
-## Shapes structures (rectangle & circle)
-
-```json
-{
-  "shape": {
-    "label": "purple-rect",
-    "kind": "rectangle",
-    "properties" : {
-      "width": 15,
-      "heigth": 10,
-      "center_x": 0,
-      "center_y": 0,
-      "color": "purple"
-    }
-  }
-},
-{
-  "shape": {
-    "label": "my-sample-circle",
-    "kind": "circle",
-    "properties" : {
-      "radius": 10,
-      "center_x": 0,
-      "center_y": 0,
-      "color": "white"
-    }
-  }
-}
+{}
 ```
