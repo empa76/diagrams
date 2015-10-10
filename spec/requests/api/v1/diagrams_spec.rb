@@ -1,17 +1,16 @@
 require 'rails_helper'
 
-describe 'api/v1/public/diagrams' do
+describe 'api/v1/diagrams' do
 
   before do
-    FactoryGirl.create_list(:user_with_diagram, 2)
+    FactoryGirl.create_list(:diagram, 2)
   end
 
-  let(:user) { User.first }
-  let(:diagram) { user.diagrams.first }
+  let(:diagram) { Diagram.first }
 
   describe :index do
     before do
-      get api_v1_user_diagrams_path(user)
+      get api_v1_diagrams_path
     end
 
     it 'response is success' do
@@ -25,7 +24,7 @@ describe 'api/v1/public/diagrams' do
 
   describe :show do
     before do
-      get api_v1_user_diagram_path(user, diagram)
+      get api_v1_diagram_path(diagram)
     end
 
     it 'response is success' do

@@ -22,69 +22,74 @@ Sample API to diagram editing using shapes (rectangle and circle)
 
 ### create new diagram
 
-POST `/api/v1/users/1/diagrams`
+POST `/api/v1/1/diagrams`
 
 #### request payload
 
-```JSON
+```json
 {
   "diagram": {
     "name": "magnetic-board"
   }
-}```
+}
+```
 
 #### response
 
-```JSON
+```json
 {
   "diagram": {
       "id": 1,
       "name": "magnetic-board",
       "shapes": []
   }
-}```
+}
+```
 
 ### update diagram
 
-PUT `/api/v1/users/1/diagrams/1`
+PUT `/api/v1/diagrams/1`
 
 #### request payload
 
-```JSON
+```json
 {
   "diagram": {
     "name": "white-magnetic-board"
   }
-}```
+}
+```
 
 #### response
 
-```JSON
+```json
 {
   "diagram": {
     "id": 1,
     "name": "white-magnetic-board",
     "shapes": []
   }
-}```
+}
+```
 
 ### delete diagram
 
-PUT `/api/v1/users/1/diagrams/1`
+PUT `/api/v1/diagrams/1`
 
 #### response
 
-```JSON
+```json
 {
-}```
+}
+```
 
 ### add shape to diagram
 
-POST `/api/v1/users/1/diagrams/1/shapes`
+POST `/api/v1/diagrams/1/shapes`
 
 #### request payload
 
-```JSON
+```json
 {
   "shape": {
     "label": "purple-square",
@@ -95,11 +100,12 @@ POST `/api/v1/users/1/diagrams/1/shapes`
       "color": "purple"
     }
   }
-}```
+}
+```
 
 #### response
 
-```JSON
+```json
 {
   "shape": {
     "id": 1,
@@ -111,15 +117,16 @@ POST `/api/v1/users/1/diagrams/1/shapes`
         "heigth": 10
     }
   }
-}```
+}
+```
 
 ### update shape on diagram
 
-PUT `/api/v1/users/1/diagrams/1/shapes/1`
+PUT `/api/v1/diagrams/1/shapes/1`
 
 #### request payload
 
-```JSON
+```json
 {
   "shape": {
     "label": "purple-square-big",
@@ -128,11 +135,12 @@ PUT `/api/v1/users/1/diagrams/1/shapes/1`
       "heigth": 100
     }
   }
-}```
+}
+```
 
 #### response
 
-```JSON
+```json
 {
   "shape": {
     "id": 1,
@@ -143,21 +151,23 @@ PUT `/api/v1/users/1/diagrams/1/shapes/1`
         "heigth": 100
     }
   }
-}```
+}
+```
 
 ### delete shape from diagram
 
-DELETE `/api/v1/users/1/diagrams/1/shapes/1`
+DELETE `/api/v1/diagrams/1/shapes/1`
 
 #### response
 
-```JSON
+```json
 {
-}```
+}
+```
 
 ## Shapes structures (rectangle & circle)
 
-```JSON
+```json
 {
   "shape": {
     "label": "purple-rect",
@@ -182,4 +192,5 @@ DELETE `/api/v1/users/1/diagrams/1/shapes/1`
       "color": "white"
     }
   }
-}```
+}
+```

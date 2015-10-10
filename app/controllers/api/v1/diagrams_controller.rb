@@ -1,8 +1,7 @@
 module Api
   module V1
     class DiagramsController < ApplicationController
-      expose(:user)
-      expose(:diagrams, ancestor: :user)
+      expose(:diagrams)
       expose(:diagram, attributes: :diagram_params)
 
       def show
@@ -14,7 +13,6 @@ module Api
       end
 
       def create
-        diagram.users << user
         if diagram.save
           render json: diagram, status: :created
         else
