@@ -18,4 +18,5 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-collection_matchers'
   gem 'shoulda'
+  gem 'simplecov'
 end
