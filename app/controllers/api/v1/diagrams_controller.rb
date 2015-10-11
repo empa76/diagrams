@@ -16,7 +16,8 @@ module Api
         if diagram.save
           render json: diagram, status: :created
         else
-          render json: { error: diagram.errors.full_messages }, status: :unprocessable_entity
+          render json: { error: diagram.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 
@@ -24,7 +25,8 @@ module Api
         if diagram.save
           render json: diagram, status: :ok
         else
-          render json: { error: diagram.errors.full_messages }, status: :unprocessable_entity
+          render json: { error: diagram.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 
@@ -32,7 +34,8 @@ module Api
         if diagram.delete
           render json: {}, status: :ok
         else
-          render json: { error: diagram.errors.full_messages }, status: :unprocessable_entity
+          render json: { error: diagram.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 

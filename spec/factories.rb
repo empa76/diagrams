@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :shape do
     sequence(:label) { |n| "shape_#{n}" }
     kind { %w(rectangle circle).sample }

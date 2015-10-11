@@ -9,5 +9,4 @@ class Rectangle < Shape
     self.width = 4
     self.heigth = 2
   end
-
 end

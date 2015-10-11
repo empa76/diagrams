@@ -8,5 +8,4 @@ class Circle < Shape
     self.kind = :circle
     self.radius = 2
   end
-
 end

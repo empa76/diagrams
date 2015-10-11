@@ -18,7 +18,8 @@ module Api
         if shape.save
           render json: shape, status: :created
         else
-          render json: { error: shape.errors.full_messages }, status: :unprocessable_entity
+          render json: { error: shape.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 
@@ -26,7 +27,8 @@ module Api
         if shape.save
           render json: shape, status: :ok
         else
-          render json: { error: shape.errors.full_messages }, status: :unprocessable_entity
+          render json: { error: shape.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 
@@ -34,21 +36,14 @@ module Api
         if shape.delete
           render json: {}, status: :ok
         else
-          render json: { error: shape.errors.full_messages }, status: :unprocessable_entity
+          render json: { error: shape.errors.full_messages },
+                 status: :unprocessable_entity
         end
       end
 
       def shape_params
-        allowed_params = [
-          :label,
-          :kind,
-          properties: [
-            :color,
-            :radius,
-            :width,
-            :heigth
-          ]
-        ]
+        allowed_params = [:label, :kind,
+                          properties: [:color, :radius, :width, :heigth]]
         params.require(:shape).permit(allowed_params)
       end
     end

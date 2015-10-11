@@ -5,7 +5,7 @@ gem 'active_model_serializers', '0.8.3'
 gem 'pg', '~> 0.18.3'
 gem 'draper'
 gem 'decent_exposure'
-gem 'spring', :group => :development
+gem 'spring', group: :development
 
 group :development, :test do
   gem 'rspec-rails'
